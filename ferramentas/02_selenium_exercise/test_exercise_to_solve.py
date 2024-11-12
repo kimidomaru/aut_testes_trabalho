@@ -6,15 +6,15 @@ from time import sleep
 from selenium.webdriver import ChromeOptions
 
 
-def test_sample_page():
-    file_path = pathlib.Path(__file__).parent.resolve()
+def testsamplepage():
+    filepath = pathlib.Path(__file).parent.resolve()
 
     options = ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(options=options)
 
-    driver.get(f"file:////{file_path}/sample-exercise_.html")
+    driver.get(f"file:////{file_path}/sample-exercise.html")
     generate_code(driver)
     sleep(5)
     code = driver.find_element(By.ID, "my-value")
