@@ -7,7 +7,7 @@ from selenium.webdriver import ChromeOptions
 
 
 def testsamplepage():
-    filepath = pathlib.Path(__file).parent.resolve()
+    filepath = pathlib.Path(__file__).parent.resolve()
 
     options = ChromeOptions()
     options.add_argument("--headless")
